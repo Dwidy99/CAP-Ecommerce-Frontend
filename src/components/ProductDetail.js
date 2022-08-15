@@ -3,7 +3,7 @@ const ProductDetail = () => {
     <div className="product-detail">
       <div className="container">
         <div className="left">
-          <img src="images/produk1.jpg" alt="" />
+          <img src="./assets/images/produk1.jpg" alt="" />
           <h3>Add to Action :</h3>
           <a href="#">
             <div className="cart">

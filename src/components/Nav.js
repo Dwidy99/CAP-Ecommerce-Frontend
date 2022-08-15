@@ -17,13 +17,17 @@ const Nav = () => {
         </li>
         <li className="cart">
           <a href="cart.html">
-            <img className="i-cart" src="images/icons/buy.png" alt="" />
+            <img
+              className="i-cart"
+              src="./assets/images/icons/buy.png"
+              alt=""
+            />
           </a>
         </li>
       </ul>
 
       <div className="menu-toggle">
-        <input type="checkbox" />
+        <input type="checkbox" className="input" />
         <span></span>
         <span></span>
         <span></span>

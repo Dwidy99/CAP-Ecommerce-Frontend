@@ -7,7 +7,7 @@ const RelateProduct = () => {
         <div className="container">
           <div className="product">
             <div className="image">
-              <img src="images/produk8.jpg" alt="" />
+              <img src="./assets/images/produk8.jpg" alt="" />
             </div>
             <div className="text">
               <a href="detail.html">
@@ -21,7 +21,7 @@ const RelateProduct = () => {
           </div>
           <div className="product">
             <div className="image">
-              <img src="images/produk9.jpg" alt="" />
+              <img src="./assets/images/produk9.jpg" alt="" />
             </div>
             <div className="text">
               <a href="detail.html">
@@ -35,7 +35,7 @@ const RelateProduct = () => {
           </div>
           <div className="product">
             <div className="image">
-              <img src="images/produk1.jpg" alt="" />
+              <img src="./assets/images/produk1.jpg" alt="" />
             </div>
             <div className="text">
               <a href="detail.html">
@@ -49,7 +49,7 @@ const RelateProduct = () => {
           </div>
           <div className="product">
             <div className="image">
-              <img src="images/produk2.jpg" alt="" />
+              <img src="./assets/images/produk2.jpg" alt="" />
             </div>
             <div className="text">
               <a href="detail.html">

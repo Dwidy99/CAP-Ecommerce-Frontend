@@ -6,7 +6,7 @@ const Testimonial = () => {
         <div className="content">
           <div className="nama">Pactric Star</div>
           <div className="testi">
-            <img src="images/testi1.jpg" className="avatar" alt="" />
+            <img src="./assets/images/testi1.jpg" className="avatar" alt="" />
             <p className="text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quae
               cum vitae iusto sunt reiciendis quibusdam temporibus quisquam ut
@@ -18,7 +18,7 @@ const Testimonial = () => {
         <div className="content">
           <div className="nama">Mr. Crab</div>
           <div className="testi">
-            <img src="images/testi2.jpg" className="avatar" alt="" />
+            <img src="./assets/images/testi2.jpg" className="avatar" alt="" />
             <p className="text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quae
               cum vitae iusto sunt reiciendis quibusdam temporibus quisquam ut

@@ -1,3 +1,5 @@
+import React from "react";
+
 const Result = () => {
   return (
     <React.Fragment>
@@ -7,7 +9,7 @@ const Result = () => {
         <div className="container">
           <div className="product">
             <div className="image">
-              <img src="images/produk8.jpg" alt="" />
+              <img src="./assets/images/produk8.jpg" alt="" />
             </div>
             <div className="text">
               <a href="detail.html">
@@ -21,7 +23,7 @@ const Result = () => {
           </div>
           <div className="product">
             <div className="image">
-              <img src="images/produk9.jpg" alt="" />
+              <img src="./assets/images/produk9.jpg" alt="" />
             </div>
             <div className="text">
               <a href="detail.html">
@@ -35,7 +37,7 @@ const Result = () => {
           </div>
           <div className="product">
             <div className="image">
-              <img src="images/produk1.jpg" alt="" />
+              <img src="./assets/images/produk1.jpg" alt="" />
             </div>
             <div className="text">
               <a href="detail.html">
@@ -49,7 +51,7 @@ const Result = () => {
           </div>
           <div className="product">
             <div className="image">
-              <img src="images/produk2.jpg" alt="" />
+              <img src="./assets/images/produk2.jpg" alt="" />
             </div>
             <div className="text">
               <a href="detail.html">
@@ -63,7 +65,7 @@ const Result = () => {
           </div>
           <div className="product">
             <div className="image">
-              <img src="images/produk3.jpg" alt="" />
+              <img src="./assets/images/produk3.jpg" alt="" />
             </div>
             <div className="text">
               <a href="detail.html">
@@ -77,7 +79,7 @@ const Result = () => {
           </div>
           <div className="product">
             <div className="image">
-              <img src="images/produk4.jpg" alt="" />
+              <img src="./assets/images/produk4.jpg" alt="" />
             </div>
             <div className="text">
               <a href="detail.html">
@@ -91,7 +93,7 @@ const Result = () => {
           </div>
           <div className="product">
             <div className="image">
-              <img src="images/produk5.jpg" alt="" />
+              <img src="./assets/images/produk5.jpg" alt="" />
             </div>
             <div className="text">
               <a href="detail.html">
@@ -105,7 +107,7 @@ const Result = () => {
           </div>
           <div className="product">
             <div className="image">
-              <img src="images/produk6.png" alt="" />
+              <img src="./assets/images/produk6.png" alt="" />
             </div>
             <div className="text">
               <a href="detail.html">
@@ -119,7 +121,7 @@ const Result = () => {
           </div>
           <div className="product">
             <div className="image">
-              <img src="images/produk7.png" alt="" />
+              <img src="./assets/images/produk7.png" alt="" />
             </div>
             <div className="text">
               <a href="detail.html">
@@ -133,7 +135,7 @@ const Result = () => {
           </div>
           <div className="product">
             <div className="image">
-              <img src="images/produk8.jpg" alt="" />
+              <img src="./assets/images/produk8.jpg" alt="" />
             </div>
             <div className="text">
               <a href="detail.html">
@@ -147,7 +149,7 @@ const Result = () => {
           </div>
           <div className="product">
             <div className="image">
-              <img src="images/produk9.jpg" alt="" />
+              <img src="./assets/images/produk9.jpg" alt="" />
             </div>
             <div className="text">
               <a href="detail.html">
@@ -161,7 +163,7 @@ const Result = () => {
           </div>
           <div className="product">
             <div className="image">
-              <img src="images/produk1.jpg" alt="" />
+              <img src="./assets/images/produk1.jpg" alt="" />
             </div>
             <div className="text">
               <a href="detail.html">
@@ -197,3 +199,5 @@ const Result = () => {
     </React.Fragment>
   );
 };
+
+export default Result;

@@ -11,7 +11,7 @@ const Hero = () => {
         </div>
 
         <div className="logo">
-          <img src="images/hero-img.svg" alt="" />
+          <img src="./assets/images/hero-img.svg" alt="" />
         </div>
       </div>
     </section>

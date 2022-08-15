@@ -1,3 +1,5 @@
+import React from "react";
+
 const ContentProduct = () => {
   return (
     <React.Fragment>
@@ -6,7 +8,7 @@ const ContentProduct = () => {
         <div className="container">
           <div className="product">
             <div className="image">
-              <img src="images/product/Cannon-EF.jpg" alt="" />
+              <img src="./assets/images/product/Cannon-EF.jpg" alt="" />
             </div>
             <div className="text">
               <a href="detail.html">
@@ -14,13 +16,13 @@ const ContentProduct = () => {
               </a>
               <p>Rp. 280.000.000</p>
               <a href="detail.html" className="cart">
-                <img src="images/icons/cart-48.png" alt="" />
+                <img src="./assets/images/icons/cart-48.png" alt="" />
               </a>
             </div>
           </div>
           <div className="product">
             <div className="image">
-              <img src="images/produk1.jpg" alt="" />
+              <img src="./assets/images/produk1.jpg" alt="" />
             </div>
             <div className="text">
               <a href="detail.html">
@@ -28,13 +30,13 @@ const ContentProduct = () => {
               </a>
               <p>Rp. 280.000.000</p>
               <a href="detail.html" className="cart">
-                <img src="images/icons/cart-48.png" alt="" />
+                <img src="./assets/images/icons/cart-48.png" alt="" />
               </a>
             </div>
           </div>
           <div className="product">
             <div className="image">
-              <img src="images/produk2.jpg" alt="" />
+              <img src="./assets/images/produk2.jpg" alt="" />
             </div>
             <div className="text">
               <a href="detail.html">
@@ -42,13 +44,13 @@ const ContentProduct = () => {
               </a>
               <p>Rp. 280.000.000</p>
               <a href="detail.html" className="cart">
-                <img src="images/icons/cart-48.png" alt="" />
+                <img src="./assets/images/icons/cart-48.png" alt="" />
               </a>
             </div>
           </div>
           <div className="product">
             <div className="image">
-              <img src="images/product/Cannon-EOS7D.jpg" alt="" />
+              <img src="./assets/images/product/Cannon-EOS7D.jpg" alt="" />
             </div>
             <div className="text">
               <a href="detail.html">
@@ -56,13 +58,13 @@ const ContentProduct = () => {
               </a>
               <p>Rp. 280.000.000</p>
               <a href="detail.html" className="cart">
-                <img src="images/icons/cart-48.png" alt="" />
+                <img src="./assets/images/icons/cart-48.png" alt="" />
               </a>
             </div>
           </div>
           <div className="product">
             <div className="image">
-              <img src="images/produk3.jpg" alt="" />
+              <img src="./assets/images/produk3.jpg" alt="" />
             </div>
             <div className="text">
               <a href="detail.html">
@@ -70,13 +72,13 @@ const ContentProduct = () => {
               </a>
               <p>Rp. 280.000.000</p>
               <a href="detail.html" className="cart">
-                <img src="images/icons/cart-48.png" alt="" />
+                <img src="./assets/images/icons/cart-48.png" alt="" />
               </a>
             </div>
           </div>
           <div className="product">
             <div className="image">
-              <img src="images/product/CANNON-WATER.jpg" alt="" />
+              <img src="./assets/images/product/CANNON-WATER.jpg" alt="" />
             </div>
             <div className="text">
               <a href="detail.html">
@@ -84,13 +86,13 @@ const ContentProduct = () => {
               </a>
               <p>Rp. 280.000.000</p>
               <a href="#" className="cart">
-                <img src="images/icons/cart-48.png" alt="" />
+                <img src="./assets/images/icons/cart-48.png" alt="" />
               </a>
             </div>
           </div>
           <div className="product">
             <div className="image">
-              <img src="images/product/CANNON-WATER.jpg" alt="" />
+              <img src="./assets/images/product/CANNON-WATER.jpg" alt="" />
             </div>
             <div className="text">
               <a href="detail.html">
@@ -98,13 +100,13 @@ const ContentProduct = () => {
               </a>
               <p>Rp. 280.000.000</p>
               <a href="#" className="cart">
-                <img src="images/icons/cart-48.png" alt="" />
+                <img src="./assets/images/icons/cart-48.png" alt="" />
               </a>
             </div>
           </div>
           <div className="product">
             <div className="image">
-              <img src="images/product/CANNON-WATER.jpg" alt="" />
+              <img src="./assets/images/product/CANNON-WATER.jpg" alt="" />
             </div>
             <div className="text">
               <a href="detail.html">
@@ -112,13 +114,13 @@ const ContentProduct = () => {
               </a>
               <p>Rp. 280.000.000</p>
               <a href="#" className="cart">
-                <img src="images/icons/cart-48.png" alt="" />
+                <img src="./assets/images/icons/cart-48.png" alt="" />
               </a>
             </div>
           </div>
           <div className="product">
             <div className="image">
-              <img src="images/product/CANNON-WATER.jpg" alt="" />
+              <img src="./assets/images/product/CANNON-WATER.jpg" alt="" />
             </div>
             <div className="text">
               <a href="detail.html">
@@ -126,7 +128,7 @@ const ContentProduct = () => {
               </a>
               <p>Rp. 280.000.000</p>
               <a href="#" className="cart">
-                <img src="images/icons/cart-48.png" alt="" />
+                <img src="./assets/images/icons/cart-48.png" alt="" />
               </a>
             </div>
           </div>
