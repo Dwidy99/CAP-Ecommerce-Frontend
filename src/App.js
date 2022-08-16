@@ -9,14 +9,14 @@ import ContentProduct from "./components/ContentProduct";
 
 function App() {
   return (
-    <React.Fragment>
+    <>
       <Nav />
       <Hero />
       <Slider />
       <ContentProduct />
       <Search />
       <Result />
-    </React.Fragment>
+    </>
   );
 }
 
