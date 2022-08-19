@@ -1,8 +1,11 @@
+import HeroImg from "../../assets/images/hero-img.svg";
+import styles from "./Hero.module.css";
+
 const Hero = () => {
   return (
-    <section className="hero">
-      <div className="container">
-        <div className="welcome">
+    <section className={styles.hero}>
+      <div className={styles.container}>
+        <div className={styles.welcome}>
           <h1>Welcome to D Shop</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo in,
@@ -10,8 +13,8 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className="logo">
-          <img src="./assets/images/hero-img.svg" alt="" />
+        <div className={styles.logo}>
+          <img src={HeroImg} alt="" />
         </div>
       </div>
     </section>

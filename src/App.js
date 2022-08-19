@@ -1,22 +1,22 @@
-import React from "react";
+import React, { Suspense } from "react";
 import "./App.css";
+import "./main";
 import Nav from "./components/Nav";
-import Hero from "./components/Hero";
-import Search from "./components/Search";
-import Slider from "./components/Slider";
-import Result from "./components/Result";
-import ContentProduct from "./components/ContentProduct";
+import LoginPage from "./components/pages/loginPage";
+import HomePage from "./components/pages/homePage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <Nav />
-      <Hero />
-      <Slider />
-      <ContentProduct />
-      <Search />
-      <Result />
-    </>
+    <BrowserRouter>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Nav />
+        <Routes>
+          <Route exact path="/" element={<HomePage />} />
+          <Route path="/login" element={<LoginPage />} />
+        </Routes>
+      </Suspense>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,92 @@
+/* HEADER */
+nav {
+  display: flex;
+  background-color: var(--main-color);
+  justify-content: space-evenly;
+  color: var(--table-color);
+  height: 65px;
+  align-items: center;
+  z-index: 2;
+}
+
+nav a h2 {
+  text-decoration: none;
+  color: #eee;
+}
+
+nav a h2:hover {
+  color: var(--danger-color);
+}
+
+nav .cart img {
+  width: 30px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 40%;
+  justify-content: space-between;
+}
+
+nav ul li a {
+  color: var(--white-color, #fff);
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: var(--danger-color);
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  margin-top: 3px;
+  position: relative;
+  z-index: 99;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  left: -5px;
+  top: -3px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: rgba(234, 192, 255);
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  background-color: var(--table-color);
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+  background-color: var(--table-color);
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+}

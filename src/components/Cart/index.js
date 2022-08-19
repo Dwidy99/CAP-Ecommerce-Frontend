@@ -1,13 +1,15 @@
-import Img1 from "./../../public/images/product/Cannon-EOS7D.jpg";
-import Img2 from "./../../public/images/product/Go-Pro-Hero9-Black.jpg";
-import Img3 from "./../../public/images/product/LUMIX-GH5.jpg";
+import styles from "./Cart.module.css";
+import Img1 from "../../assets/images/product/Cannon-EOS7D.jpg";
+import Img2 from "../../assets/images/product/Go-Pro-Hero9-Black.jpg";
+import Img3 from "../../assets/images/product/LUMIX-GH5.jpg";
+import React from "react";
 
 const Cart = () => {
   return (
     <React.Fragment>
       <h2 className="header-title">KERANJANG</h2>
-      <div className="keranjang-product">
-        <div className="container">
+      <div className={styles.keranjangProduct}>
+        <div className={styles.container}>
           <table>
             <thead>
               <tr>
@@ -27,9 +29,7 @@ const Cart = () => {
                 <td>Package Mackbook</td>
                 <td>Rp. 28.000.000,-</td>
                 <td>
-                  <a href="#" className="action">
-                    Delete
-                  </a>
+                  <button className={styles.action}>Delete</button>
                 </td>
               </tr>
               <tr>
@@ -40,9 +40,7 @@ const Cart = () => {
                 <td>Package Mackbook</td>
                 <td>Rp. 28.000.000,-</td>
                 <td>
-                  <a href="#" className="action">
-                    Delete
-                  </a>
+                  <button className={styles.action}>Delete</button>
                 </td>
               </tr>
               <tr>
@@ -53,9 +51,7 @@ const Cart = () => {
                 <td>Package Mackbook</td>
                 <td>Rp. 28.000.000,-</td>
                 <td>
-                  <a href="#" className="action">
-                    Delete
-                  </a>
+                  <button className={styles.action}>Delete</button>
                 </td>
               </tr>
               <tr>
@@ -66,9 +62,7 @@ const Cart = () => {
                 <td>Sony Camera</td>
                 <td>Rp. 28.000.000,-</td>
                 <td>
-                  <a href="#" className="action">
-                    Delete
-                  </a>
+                  <button className={styles.action}>Delete</button>
                 </td>
               </tr>
               <tr>
@@ -79,20 +73,14 @@ const Cart = () => {
                 <td>Sony Camera</td>
                 <td>Rp. 28.000.000,-</td>
                 <td>
-                  <a href="#" className="action">
-                    Delete
-                  </a>
+                  <button className={styles.action}>Delete</button>
                 </td>
               </tr>
             </tbody>
           </table>
 
-          <a href="#" className="checkout">
-            Checkout
-          </a>
-          <a href="#" className="shopping">
-            Belanja lagi
-          </a>
+          <button className={styles.checkout}>Checkout</button>
+          <button className={styles.shopping}>Belanja lagi</button>
         </div>
       </div>
     </React.Fragment>

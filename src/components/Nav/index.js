@@ -1,27 +1,27 @@
+import styles from "./Nav.module.css";
+import { Link } from "react-router-dom";
+import CartLink from "../../assets/images/icons/buy.png";
+
 const Nav = () => {
   return (
     <nav>
-      <a href="index.html">
+      <Link to="/">
         <h2>D Store</h2>
-      </a>
+      </Link>
 
       <ul>
         <li>
-          <a href="index.html">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="product.html">Product</a>
+          <Link to="/">Product</Link>
         </li>
         <li>
-          <a href="login.html">Signin</a>
+          <Link to="/login">Signin</Link>
         </li>
-        <li className="cart">
+        <li className={styles.cart}>
           <a href="cart.html">
-            <img
-              className="i-cart"
-              src="./assets/images/icons/buy.png"
-              alt=""
-            />
+            <img className="i-cart" src={CartLink} alt="" />
           </a>
         </li>
       </ul>

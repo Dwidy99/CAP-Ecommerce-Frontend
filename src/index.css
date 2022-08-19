@@ -1,0 +1,86 @@
+/* 
+    Theme Name: eCommerce;
+    Theme Author: Dwi Yulianto;
+    Author URI: https://instagram.com/xy_dwi
+    Version: 1.0;
+    License: MIT; 
+*/
+
+:root {
+  --main-color: #008374;
+  --secondary-color: #00796b;
+  --thrid-color: #3db757;
+  --danger-color: #f85a40;
+  --white-color: #ffffff;
+  --table-color: #eaeaea;
+  --font-color: #333;
+}
+
+@font-face {
+  font-family: "Open-Sans";
+  src: url("./assets/fonts/open-sans.ttf");
+}
+
+@font-face {
+  font-family: "Mouse-Memoirs";
+  src: url("./assets/fonts/MouseMemoirs-Regular.ttf");
+}
+
+/* FONT-FAMILY */
+.keranjang-product .shopping,
+.keranjang-product .header-title,
+.product-detail .right .content-review,
+.product-detail .right .price,
+.testimonial .content .nama,
+.testimonial .content .text,
+.content-product .user .forgot,
+.header-small .select,
+.welcome,
+table tbody,
+h3,
+p,
+a {
+  font-family: "Open-Sans";
+}
+
+.content-product .header-title,
+.product-detail .right .content-review .buyer,
+.small-footer .link a,
+.testimonial .header-title,
+.header-small .submit,
+.keranjang-product .checkout,
+.small-footer .copyright,
+.keranjang-product table tbody .action,
+table thead,
+h2,
+button {
+  font-family: "Mouse-Memoirs";
+}
+
+.header-small .field {
+  font-family: "Open-Sans";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* DEFAULT CLASS */
+body {
+  padding: 0px;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Header title */
+h2.header-title {
+  width: 85%;
+  margin: 50px auto;
+  overflow: hidden;
+  padding: 10px;
+  background: var(--secondary-color, #19005c);
+  color: var(--white-color, #fff);
+  border: 1px silver;
+  border-left: 5px solid var(--danger-color, red);
+}

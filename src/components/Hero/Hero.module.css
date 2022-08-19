@@ -1,39 +1,31 @@
-/* HEADER-SMALL */
-/* .header-small {
-  width: 85%;
-  overflow: hidden;
-  background: var(--secondary-color, #19005c);
-  padding: 10px 0;
-  margin: 0 auto;
+/* HERO */
+section.hero {
+  margin-bottom: 50px;
 }
-
-.header-small .container form {
+section.hero .container {
+  width: 100%;
+  height: 455px;
+  box-sizing: border-box;
+  background-color: var(--secondary-color);
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  z-index: -2;
 }
 
-.header-small .submit {
-  width: 120px;
-  height: 40px;
-  background: var(--thrid-color, #3db757);
-  color: var(--white-color, #fff);
-  font-weight: bold;
-  border: 0;
-  border-radius: 5px;
-  border: 0;
+section.hero .container .welcome {
+  display: flex;
+  flex-direction: column;
+  margin-top: 55px;
+  margin-left: 100px;
+  color: var(--table-color);
 }
 
-.header-small .field {
-  width: 150px;
-  padding: 10px;
-  height: 20px;
-  border-radius: 5px;
-  border: 0;
-  margin: 0 10px;
-} */
+section.hero .container .logo {
+  margin-top: 55px;
+  margin-right: 100px;
+  color: var(--table-color);
+}
 
 @media screen and (max-width: 1200px) {
   section.hero .container {

@@ -1,34 +1,29 @@
+import styles from "./ProductDetail.module.css";
+import Product1 from "../../assets/images/produk1.jpg";
+
 const ProductDetail = () => {
   return (
-    <div className="product-detail">
-      <div className="container">
-        <div className="left">
-          <img src="./assets/images/produk1.jpg" alt="" />
+    <div className={styles.productDetail}>
+      <div className={styles.container}>
+        <div className={styles.left}>
+          <img src={Product1} alt="" />
           <h3>Add to Action :</h3>
-          <a href="#">
-            <div className="cart">
-              <i className="fa fa-shopping-cart fa-lg"></i> Add to Cart
-            </div>
-          </a>
-          <a href="#">
-            <div className="wishlist">
-              <i className="fa fa-save fa-lg"></i> Add to Wishlist
-            </div>
-          </a>
-          <a href="#">
-            <div className="report">
-              <i className="fa fa-close fa-lg"></i> Report this Product
-            </div>
-          </a>
-          <a href="#">
-            <div className="share">
-              <i className="fa fa-share-alt fa-lg"></i> Share this Product
-            </div>
-          </a>
+          <button>
+            <div className={styles.cart}>Add to Cart</div>
+          </button>
+          <button>
+            <div className={styles.wishlist}>Add to Wishlist</div>
+          </button>
+          <button>
+            <div className={styles.report}>Report this Product</div>
+          </button>
+          <button>
+            <div className={styles.share}>Share this Product</div>
+          </button>
         </div>
-        <div className="right">
+        <div className={styles.right}>
           <h2>Package Mackbook Pro Air 4K</h2>
-          <h3 className="price">Rp. 28.000.000,-</h3>
+          <h3 className={styles.price}>Rp. 28.000.000,-</h3>
           <h3>Deskripsi Product :</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
@@ -47,46 +42,46 @@ const ProductDetail = () => {
             perferendis necessitatibus distinctio officiis molestias?
           </p>
           <h3>Review</h3>
-          <div className="content-review">
-            <p className="rate">
+          <div className={styles.contentReview}>
+            <p className={styles.rate}>
               <i className="fa fa-star"></i>
               <i className="fa fa-star"></i>
               <i className="fa fa-star"></i>
               <i className="fa fa-star-half"></i>
             </p>
-            <h4 className="buyer">Dwi Yulianto, CEO GadangLearn.com</h4>
-            <p className="comment">
+            <h4 className={styles.buyer}>Dwi Yulianto, CEO GadangLearn.com</h4>
+            <p className={styles.comment}>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam,
               mollitia? Expedita ipsa iste eveniet illo. Nisi dicta ipsa dolore
               incidunt a repellendus voluptatibus, sit ipsam voluptates vitae in
               possimus aperiam.
             </p>
           </div>
-          <div className="content-review">
-            <p className="rate">
+          <div className={styles.contentReview}>
+            <p className={styles.rate}>
               <i className="fa fa-star"></i>
               <i className="fa fa-star"></i>
               <i className="fa fa-star"></i>
               <i className="fa fa-star"></i>
             </p>
-            <h4 className="buyer">Dwi, CEO Learn.com</h4>
-            <p className="comment">
+            <h4 className={styles.buyer}>Dwi, CEO Learn.com</h4>
+            <p className={styles.comment}>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam,
               mollitia? Expedita ipsa iste eveniet illo. Nisi dicta ipsa dolore
               incidunt a repellendus voluptatibus, sit ipsam voluptates vitae in
               possimus aperiam.
             </p>
           </div>
-          <div className="content-review">
-            <p className="rate">
+          <div className={styles.contentReview}>
+            <p className={styles.rate}>
               <i className="fa fa-star"></i>
               <i className="fa fa-star"></i>
               <i className="fa fa-star"></i>
               <i className="fa fa-star"></i>
               <i className="fa fa-star"></i>
             </p>
-            <h4 className="buyer">Yulianto, CEO Gadang.com</h4>
-            <p className="comment">
+            <h4 className={styles.buyer}>Yulianto, CEO Gadang.com</h4>
+            <p className={styles.comment}>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam,
               mollitia? Expedita ipsa iste eveniet illo. Nisi dicta ipsa dolore
               incidunt a repellendus voluptatibus, sit ipsam voluptates vitae in
@@ -94,7 +89,7 @@ const ProductDetail = () => {
             </p>
           </div>
           <h3>Beri Review :</h3>
-          <div className="content-review">
+          <div className={styles.contentReview}>
             <form action="">
               <input type="text" name="name" placeholder="Name.." required />
               <input type="email" name="name" placeholder="Email.." required />
@@ -107,9 +102,7 @@ const ProductDetail = () => {
                 <option value="">4 Star</option>
                 <option value="">5 Star</option>
               </select>
-              <button type="submit">
-                <i className="fa fa-send-o"></i> Kirim
-              </button>
+              <button type="submit">Kirim</button>
             </form>
           </div>
         </div>
