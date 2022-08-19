@@ -1,8 +1,11 @@
 import styles from "./Nav.module.css";
 import { Link } from "react-router-dom";
 import CartLink from "../../assets/images/icons/buy.png";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth, db, logout } from "../../config/firebase";
 
 const Nav = () => {
+  const [user] = useAuthState(auth);
   return (
     <nav>
       <Link to="/">
@@ -16,14 +19,22 @@ const Nav = () => {
         <li>
           <Link to="/product">Product</Link>
         </li>
-        <li>
-          <Link to="/login">Signin</Link>
-        </li>
-        <li className={styles.cart}>
-          <a href="cart.html">
-            <img className="i-cart" src={CartLink} alt="" />
-          </a>
-        </li>
+        {user ? (
+          <li>
+            <a onClick={logout}>Logout</a>
+          </li>
+        ) : (
+          <li>
+            <Link to="/login">Signin</Link>
+          </li>
+        )}
+        {user && (
+          <li className={styles.cart}>
+            <Link to="/cart">
+              <img className="i-cart" src={CartLink} alt="" />
+            </Link>
+          </li>
+        )}
       </ul>
 
       <div className="menu-toggle">
