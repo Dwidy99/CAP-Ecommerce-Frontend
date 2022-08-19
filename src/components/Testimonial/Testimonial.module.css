@@ -44,3 +44,70 @@ section.testimonial .content .text {
   color: #eee;
   font-style: italic;
 }
+
+section.testimonial {
+  height: 500px;
+}
+
+section.testimonial .container .content p {
+  margin-right: 20px;
+}
+
+section.testimonial .container .content {
+  margin-left: 70px;
+  margin-right: 100px;
+}
+
+.mega-footer {
+  height: 280px;
+}
+
+.mega-footer .container .content {
+  margin: 15px;
+}
+
+@media screen and (max-width: 1200px) {
+  section.testimonial {
+    height: 1000px;
+  }
+
+  section.testimonial .container .content p {
+    margin-right: 20px;
+  }
+
+  section.testimonial .container .content {
+    margin-left: 70px;
+    margin-right: 100px;
+  }
+}
+
+/* mobile */
+@media screen and (max-width: 600px) {
+  section.testimonial {
+    height: 1090px;
+  }
+
+  section.testimonial .container .content {
+    margin-left: 55px;
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section.testimonial .container .content .testi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section.testimonial .container .content .nama {
+    margin-right: 85px;
+  }
+
+  section.testimonial .container .content .testi img {
+    margin-right: 70px;
+  }
+}

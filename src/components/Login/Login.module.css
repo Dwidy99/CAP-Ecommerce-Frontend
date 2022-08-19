@@ -21,18 +21,15 @@
 }
 
 .contentLogin .user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 550px;
-  overflow: hidden;
-  margin: auto;
-}
-
-.contentLogin .user .forgot {
-  float: left;
-  padding: 10px;
 }
 
 .contentLogin .user input {
-  width: 500px;
+  width: 300px;
   height: 40px;
   border: 1px solid #dadada;
   border-radius: 3px;
@@ -42,115 +39,49 @@
 
 .contentLogin .user button,
 .register {
-  float: left;
-  width: 200px;
+  width: 300px;
   padding: 10px;
   background: var(--secondary-color, #333);
   border-radius: 3px;
   border: 0;
   color: var(--white-color, #fff);
+  margin-bottom: 10px;
 }
 
 .register {
-  width: 150px;
-  margin-left: 135px;
+  width: 280px;
+  padding: 10px;
+  background: var(--secondary-color, #333);
+  border-radius: 3px;
+  border: 0;
+  color: var(--white-color, #fff);
+  margin-bottom: 10px;
   text-align: center;
   text-decoration: none;
+
+  font-family: "Mouse-Memoirs";
 }
 
-.contentLogin .indicator {
-  width: 250px;
-  overflow: hidden;
-  margin: auto;
-  margin-top: 50px;
-}
+@media screen and (max-width: 600px) {
+  .contentLogin .user input {
+    width: 305px;
+  }
 
-.contentLogin .indicator ul {
-  margin: 0;
-  padding: 0;
-}
+  .contentLogin .user button,
+  .register {
+    float: left;
+    width: 200px;
+    padding: 10px;
+    background: var(--secondary-color, #333);
+    border-radius: 3px;
+    border: 0;
+    color: var(--white-color, #fff);
+  }
 
-.contentLogin .indicator li {
-  padding: 10px;
-  float: left;
-  display: block;
-  margin-left: 10px;
-  border-radius: 3px;
-  background: var(--main-color, #19005c);
-  transition: all 1s;
-}
-
-.contentLogin .indicator li:hover {
-  background: #202020;
-}
-
-.contentLogin .indicator a {
-  color: var(--white-color, #fff);
-  text-decoration: none;
-}
-
-.contentLogin .product {
-  width: 230px;
-  height: 230px;
-  overflow: hidden;
-  border-radius: 5px;
-  margin: 5px;
-}
-
-.contentLogin .product .text {
-  margin-left: 10px;
-}
-
-.contentLogin .product img {
-  width: 100%;
-  height: 150px;
-  transition: all 1s;
-}
-
-.contentLogin .product .image {
-  overflow: hidden;
-}
-
-.contentLogin .product .image:hover img {
-  transform: scale(2);
-}
-
-.contentLogin .cart {
-  padding: 7px;
-  border-radius: 3px;
-  float: right;
-  color: var(--white-color, #fff) !important;
-  margin: -12px 0 0 10px;
-  transition: all 1s;
-}
-
-.contentLogin .cart img {
-  width: 25px;
-  height: 25px;
-}
-
-.contentLogin .product .text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.contentLogin .product .text a {
-  text-decoration: none;
-}
-
-.contentLogin .product .text h3 {
-  color: var(--main-color);
-}
-
-.contentLogin .product .text p {
-  position: relative;
-  margin-top: -20px;
-}
-
-.contentLogin .product .text a.cart img {
-  float: right;
-  position: relative;
-  margin-top: -35px;
-  margin-right: 5px;
+  .register {
+    width: 150px;
+    margin-left: 135px;
+    text-align: center;
+    text-decoration: none;
+  }
 }

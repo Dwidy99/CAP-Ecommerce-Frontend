@@ -141,3 +141,35 @@
   width: 400px;
   height: 250px;
 }
+
+/* mobile */
+@media screen and (max-width: 600px) {
+  .product-detail .container .left {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-detail .container .right {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+
+  .product-detail .container .right .content-review {
+    width: 300px;
+  }
+
+  .product-detail .right .content-review form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-detail .right .content-review select,
+  .product-detail .right .content-review input,
+  .product-detail .right .content-review textarea {
+    width: 285px;
+  }
+}

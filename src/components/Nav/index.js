@@ -2,7 +2,7 @@ import styles from "./Nav.module.css";
 import { Link } from "react-router-dom";
 import CartLink from "../../assets/images/icons/buy.png";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth, db, logout } from "../../config/firebase";
+import { auth, logout } from "../../config/firebase";
 
 const Nav = () => {
   const [user] = useAuthState(auth);
@@ -21,7 +21,9 @@ const Nav = () => {
         </li>
         {user ? (
           <li>
-            <a onClick={logout}>Logout</a>
+            <a href="/#" onClick={logout}>
+              Logout
+            </a>
           </li>
         ) : (
           <li>
@@ -37,8 +39,8 @@ const Nav = () => {
         )}
       </ul>
 
-      <div className="menu-toggle">
-        <input type="checkbox" className="input" />
+      <div className={styles.menuToggle}>
+        <input type="checkbox" className={styles.input} />
         <span></span>
         <span></span>
         <span></span>

@@ -53,7 +53,7 @@ a {
 .keranjang-product table tbody .action,
 table thead,
 h2,
-.contentLogin .user .register,
+.register,
 button {
   font-family: "Mouse-Memoirs";
 }
@@ -84,4 +84,11 @@ h2.header-title {
   color: var(--white-color, #fff);
   border: 1px silver;
   border-left: 5px solid var(--danger-color, red);
+}
+
+/* mobile */
+@media screen and (max-width: 600px) {
+  body {
+    box-sizing: border-box;
+  }
 }

@@ -1,6 +1,5 @@
 import React, { Suspense } from "react";
 import "./App.css";
-import "./main";
 import Nav from "./components/Nav";
 import LoginPage from "./pages/loginPage";
 import RegisterPage from "./pages/registerPage";

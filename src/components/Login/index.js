@@ -1,12 +1,13 @@
-import React, { useState } from "react";
-import { logInWithEmailAndPassword } from "../../config/firebase";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { auth, logInWithEmailAndPassword } from "../../config/firebase";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 import styles from "./Login.module.css";
 
 const Signin = () => {
-  //   const [user, loading, error] = useAuthState(auth);
-  //   const navigate = useNavigate();
+  const [user, loading, error] = useAuthState(auth);
+  const navigate = useNavigate();
 
   const [login, setLogin] = useState({
     email: "",
@@ -17,8 +18,17 @@ const Signin = () => {
     e.preventDefault();
     if (param === "login") {
       await logInWithEmailAndPassword(login.email, login.password);
+      alert();
     }
   };
+
+  useEffect(() => {
+    if (loading) {
+      return;
+    }
+    if (user) navigate("/");
+    if (error) alert(error);
+  }, [loading, user, error, navigate]);
 
   return (
     <React.Fragment>
@@ -49,9 +59,9 @@ const Signin = () => {
             <Link to="/register" className={styles.register}>
               Register
             </Link>
-            <a href="#" className={styles.forgot}>
+            {/* <a href="#" className={styles.forgot}>
               Forgot Password
-            </a>
+            </a> */}
           </form>
         </div>
       </div>

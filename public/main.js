@@ -1,10 +1,11 @@
 // Nav
+const menuToggle = document.querySelector(".menuToggle input");
+const nav = document.querySelector("nav ul");
 document.addEventListener("click", function (e) {
-  const nav = document.querySelector("nav ul");
-  //   const span = document.querySelectorAll(".menu-toggle span");
+  const span = document.querySelectorAll(".menuToggle span");
   if (e.target.classList.contains("input")) {
     nav.classList.toggle("menuSlide");
-    // span.classList.toggle("menuSlide");
+    span.classList.toggle("menuSlide");
   }
 });
 

@@ -52,3 +52,20 @@
   height: 300px;
   flex-wrap: wrap;
 }
+
+@media screen and (max-width: 1200px) {
+  .megaFooter {
+    height: 780px;
+  }
+
+  .megaFooter .container .content {
+    margin: 15px;
+  }
+}
+
+/* mobile */
+@media screen and (max-width: 600px) {
+  .megaFooter {
+    height: 700px;
+  }
+}

@@ -38,7 +38,7 @@ nav ul li a:hover {
   color: var(--danger-color);
 }
 
-.menu-toggle {
+.menuToggle {
   display: none;
   flex-direction: column;
   height: 20px;
@@ -48,7 +48,7 @@ nav ul li a:hover {
   z-index: 99;
 }
 
-.menu-toggle input {
+.menuToggle input {
   position: absolute;
   width: 40px;
   height: 20px;
@@ -59,7 +59,7 @@ nav ul li a:hover {
   z-index: 2;
 }
 
-.menu-toggle span {
+.menuToggle span {
   display: block;
   width: 28px;
   height: 3px;
@@ -68,25 +68,74 @@ nav ul li a:hover {
   transition: all 0.5s;
 }
 
-.menu-toggle span:nth-child(2) {
+.menuToggle span:nth-child(2) {
   transform-origin: 0 0;
 }
 
-.menu-toggle span:nth-child(4) {
+.menuToggle span:nth-child(4) {
   transform-origin: 0 100%;
 }
 
-.menu-toggle input:checked ~ span:nth-child(2) {
+.menuToggle input:checked ~ span:nth-child(2) {
   background-color: var(--table-color);
   transform: rotate(45deg) translate(-1px, -1px);
 }
 
-.menu-toggle input:checked ~ span:nth-child(4) {
+.menuToggle input:checked ~ span:nth-child(4) {
   background-color: var(--table-color);
   transform: rotate(-45deg) translate(-1px, 0);
 }
 
-.menu-toggle input:checked ~ span:nth-child(3) {
+.menuToggle input:checked ~ span:nth-child(3) {
   opacity: 0;
   transform: scale(0);
+}
+
+@media screen and (max-width: 922px) {
+  nav ul {
+    width: 50%;
+  }
+
+  nav .cart img {
+    width: 30px;
+  }
+}
+
+/* mobile */
+@media screen and (max-width: 600px) {
+  body {
+    box-sizing: border-box;
+  }
+  .menuToggle {
+    display: flex;
+  }
+
+  nav ul {
+    display: flex;
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    top: 0;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--secondary-color);
+    z-index: 1;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 1.5s;
+  }
+
+  nav .cart img {
+    width: 30px;
+  }
+
+  nav ul.menuSlide {
+    display: flex;
+    justify-content: space-around;
+    opacity: 1;
+    margin-top: 0;
+    transform: translateY(0);
+  }
 }
