@@ -1,5 +1,5 @@
-import Hero from "../Hero";
-import Footer from "../Footer";
+import Hero from "../components/Hero";
+import Footer from "../components/Footer";
 
 const HomePage = () => {
   return (

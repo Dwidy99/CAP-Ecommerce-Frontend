@@ -1,5 +1,5 @@
-import Login from "../Login";
-import Footer from "../Footer";
+import Login from "../components/Login";
+import Footer from "../components/Footer";
 
 const LoginPage = () => {
   return (

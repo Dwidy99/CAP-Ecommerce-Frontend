@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { logInWithEmailAndPassword } from "../../config/firebase";
+import { Link } from "react-router-dom";
 
 import styles from "./Login.module.css";
 
@@ -45,6 +46,9 @@ const Signin = () => {
             <button type="submit" onClick={(e) => handleLogin(e, "login")}>
               Login
             </button>
+            <Link to="/register" className={styles.register}>
+              Register
+            </Link>
             <a href="#" className={styles.forgot}>
               Forgot Password
             </a>

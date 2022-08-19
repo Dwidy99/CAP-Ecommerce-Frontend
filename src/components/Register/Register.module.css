@@ -1,12 +1,12 @@
 /* CONTENT PRODUCT */
-.contentLogin {
+.contentRegister {
   width: 100%;
   overflow: hidden;
   padding-bottom: 50px;
   margin: 75px 0;
 }
 
-.contentLogin .container {
+.contentRegister .container {
   width: 85%;
   display: flex;
   flex-wrap: wrap;
@@ -16,22 +16,22 @@
   box-sizing: border-box;
 }
 
-.contentLogin .container .product {
+.contentRegister .container .product {
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
-.contentLogin .user {
+.contentRegister .user {
   width: 550px;
   overflow: hidden;
   margin: auto;
 }
 
-.contentLogin .user .forgot {
+.contentRegister .user .forgot {
   float: left;
   padding: 10px;
 }
 
-.contentLogin .user input {
+.contentRegister .user input {
   width: 500px;
   height: 40px;
   border: 1px solid #dadada;
@@ -40,8 +40,7 @@
   float: left;
 }
 
-.contentLogin .user button,
-.register {
+.contentRegister .user button {
   float: left;
   width: 200px;
   padding: 10px;
@@ -51,26 +50,19 @@
   color: var(--white-color, #fff);
 }
 
-.register {
-  width: 150px;
-  margin-left: 135px;
-  text-align: center;
-  text-decoration: none;
-}
-
-.contentLogin .indicator {
+.contentRegister .indicator {
   width: 250px;
   overflow: hidden;
   margin: auto;
   margin-top: 50px;
 }
 
-.contentLogin .indicator ul {
+.contentRegister .indicator ul {
   margin: 0;
   padding: 0;
 }
 
-.contentLogin .indicator li {
+.contentRegister .indicator li {
   padding: 10px;
   float: left;
   display: block;
@@ -80,16 +72,16 @@
   transition: all 1s;
 }
 
-.contentLogin .indicator li:hover {
+.contentRegister .indicator li:hover {
   background: #202020;
 }
 
-.contentLogin .indicator a {
+.contentRegister .indicator a {
   color: var(--white-color, #fff);
   text-decoration: none;
 }
 
-.contentLogin .product {
+.contentRegister .product {
   width: 230px;
   height: 230px;
   overflow: hidden;
@@ -97,25 +89,25 @@
   margin: 5px;
 }
 
-.contentLogin .product .text {
+.contentRegister .product .text {
   margin-left: 10px;
 }
 
-.contentLogin .product img {
+.contentRegister .product img {
   width: 100%;
   height: 150px;
   transition: all 1s;
 }
 
-.contentLogin .product .image {
+.contentRegister .product .image {
   overflow: hidden;
 }
 
-.contentLogin .product .image:hover img {
+.contentRegister .product .image:hover img {
   transform: scale(2);
 }
 
-.contentLogin .cart {
+.contentRegister .cart {
   padding: 7px;
   border-radius: 3px;
   float: right;
@@ -124,31 +116,31 @@
   transition: all 1s;
 }
 
-.contentLogin .cart img {
+.contentRegister .cart img {
   width: 25px;
   height: 25px;
 }
 
-.contentLogin .product .text {
+.contentRegister .product .text {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.contentLogin .product .text a {
+.contentRegister .product .text a {
   text-decoration: none;
 }
 
-.contentLogin .product .text h3 {
+.contentRegister .product .text h3 {
   color: var(--main-color);
 }
 
-.contentLogin .product .text p {
+.contentRegister .product .text p {
   position: relative;
   margin-top: -20px;
 }
 
-.contentLogin .product .text a.cart img {
+.contentRegister .product .text a.cart img {
   float: right;
   position: relative;
   margin-top: -35px;

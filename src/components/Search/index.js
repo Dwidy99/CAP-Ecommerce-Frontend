@@ -1,16 +1,18 @@
+import styles from "./Search.module.css";
+
 const Search = () => {
   return (
-    <div className="header-small">
-      <div className="container">
+    <div className={styles.headerSmall}>
+      <div className={styles.container}>
         <form action="result.html" method="">
           <input
             type="text"
             name="name"
-            className="field"
+            className={styles.field}
             placeholder="Type your product.."
           />
-          <button type="submit" className="submit">
-            <i className="fa fa-send-o"></i> Search
+          <button type="submit" className={styles.submit}>
+            Search
           </button>
         </form>
       </div>
