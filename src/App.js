@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import "./App.css";
-import Nav from "./components/Nav";
+import Nav from "./components/Navbar";
 import LoginPage from "./pages/loginPage";
 import RegisterPage from "./pages/registerPage";
 import CartPage from "./pages/cartPage";

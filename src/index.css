@@ -6,19 +6,13 @@
     License: MIT; 
 */
 
-:root {
-  --main-color: #008374;
-  --secondary-color: #00796b;
-  --thrid-color: #3db757;
-  --danger-color: #f85a40;
-  --white-color: #ffffff;
-  --table-color: #eaeaea;
-  --font-color: #333;
-}
-
-@font-face {
-  font-family: "Open-Sans";
-  src: url("./assets/fonts/open-sans.ttf");
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @font-face {
@@ -26,69 +20,36 @@
   src: url("./assets/fonts/MouseMemoirs-Regular.ttf");
 }
 
-/* FONT-FAMILY */
-.keranjang-product .shopping,
-.keranjang-product .header-title,
-.product-detail .right .content-review,
-.product-detail .right .price,
-.testimonial .content .nama,
-.testimonial .content .text,
-.content-product .user .forgot,
-.header-small .select,
-.welcome,
-table tbody,
-h3,
-p,
-a {
-  font-family: "Open-Sans";
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
-.content-product .header-title,
-.product-detail .right .content-review .buyer,
-.small-footer .link a,
-.testimonial .header-title,
-.header-small .submit,
-.keranjang-product .checkout,
-.small-footer .copyright,
-.keranjang-product table tbody .action,
-table thead,
-h2,
-.register,
-button {
-  font-family: "Mouse-Memoirs";
-}
+:root {
+  --main-container-color: #f3f4f6;
+  --main-border-color: #e5e7eb;
 
-.header-small .field {
-  font-family: "Open-Sans";
+  --main-background-color: #00ad99;
+  --secondary-background-color: #ecfdf5;
+  --secondary-background-color-light: #fff;
+
+  --main-font-color: #374151;
+  --secondary-font-color: #f3f4f6;
+  --danger-font-color: #ef4444;
+  --label-font-color: #00796b;
+
+  --main-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --main-box-shadow-inset: rgba(50, 50, 93, 0.25) 0px 3px 4px -2px inset,
+    rgba(0, 0, 0, 0.3) 0px 4px 6px -6px inset;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* DEFAULT CLASS */
-body {
-  padding: 0px;
-  margin: 0;
+* {
   box-sizing: border-box;
-  overflow-x: hidden;
-}
-
-/* Header title */
-h2.header-title {
-  width: 85%;
-  margin: 50px auto;
-  overflow: hidden;
-  padding: 10px;
-  background: var(--secondary-color, #19005c);
-  color: var(--white-color, #fff);
-  border: 1px silver;
-  border-left: 5px solid var(--danger-color, red);
-}
-
-/* mobile */
-@media screen and (max-width: 600px) {
-  body {
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
 }
