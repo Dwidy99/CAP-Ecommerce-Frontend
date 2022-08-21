@@ -1,6 +1,6 @@
 import Slider from "../components/Slider";
 import Search from "../components/Search";
-import Product from "../components/ContentProduct";
+import Products from "../components/Products";
 import Footer from "../components/Footer";
 import React from "react";
 
@@ -9,7 +9,7 @@ const ProductPage = () => {
     <React.Fragment>
       <Slider />
       <Search />
-      <Product />
+      <Products />
       <Footer />
     </React.Fragment>
   );

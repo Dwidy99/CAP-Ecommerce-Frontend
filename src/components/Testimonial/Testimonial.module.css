@@ -1,113 +1,33 @@
 /* TESTIMONIAL */
 section.testimonial {
-  background: var(--main-color, #19005c);
-  width: 100%;
-  overflow: hidden;
-  height: 550px;
+  background: var(--secondary-background-color);
+  min-height: 400px;
 }
 
-section.testimonial .headerTitle {
-  color: var(--white-color, #fff);
+section.testimonial h3,
+section.testimonial h5 {
+  font-family: "Mouse-Memoirs";
+}
+
+section.testimonial h3 {
+  color: var(--secondary-font-color);
   text-align: center;
+  padding-top: 15px;
 }
 
-section.testimonial .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 100px;
-}
-
-section.testimonial .container .content {
-  display: flex;
-  flex-direction: column;
+section.testimonial p {
   margin: 30px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-style: italic;
 }
 
-section.testimonial .content .nama {
-  margin: 15px;
-  color: var(--white-color, #fff);
-}
-
-section.testimonial .content .avatar {
+section.testimonial .avatar {
   width: 100px;
   height: 100px;
   border-radius: 100%;
   float: left;
   background: #3498db;
   margin: 0 10px 0 0;
-}
-
-section.testimonial .content .text {
-  margin: 0;
-  color: #eee;
-  font-style: italic;
-}
-
-section.testimonial {
-  height: 500px;
-}
-
-section.testimonial .container .content p {
-  margin-right: 20px;
-}
-
-section.testimonial .container .content {
-  margin-left: 70px;
-  margin-right: 100px;
-}
-
-.mega-footer {
-  height: 280px;
-}
-
-.mega-footer .container .content {
-  margin: 15px;
-}
-
-@media screen and (max-width: 1200px) {
-  section.testimonial {
-    height: 1000px;
-  }
-
-  section.testimonial .container .content p {
-    margin-right: 20px;
-  }
-
-  section.testimonial .container .content {
-    margin-left: 70px;
-    margin-right: 100px;
-  }
-}
-
-/* mobile */
-@media screen and (max-width: 600px) {
-  section.testimonial {
-    height: 1090px;
-  }
-
-  section.testimonial .container .content {
-    margin-left: 55px;
-    margin-right: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  section.testimonial .container .content .testi {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  section.testimonial .container .content .nama {
-    margin-right: 85px;
-  }
-
-  section.testimonial .container .content .testi img {
-    margin-right: 70px;
-  }
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
 }

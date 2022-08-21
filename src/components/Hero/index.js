@@ -1,22 +1,22 @@
-import HeroImg from "../../assets/images/hero-img.svg";
 import styles from "./Hero.module.css";
+
+import { Container, Row, Col, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
     <section className={styles.hero}>
-      <div className={styles.container}>
-        <div className={styles.welcome}>
-          <h1>Welcome to D Shop</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo in,
-            dolore minus laborum consequuntur facilis.
-          </p>
-        </div>
-
-        <div className={styles.logo}>
-          <img src={HeroImg} alt="" />
-        </div>
-      </div>
+      <Container className={styles.jumbotron}>
+        <Row>
+          <Col className="text-center pt-5">
+            <h1>Welcome to D Shop</h1>
+            <h2>NEW COLLECTION UP TO 50% OFF</h2>
+            <Link to="/product">
+              <Button variant="danger">Check it Out</Button>
+            </Link>
+          </Col>
+        </Row>
+      </Container>
     </section>
   );
 };
