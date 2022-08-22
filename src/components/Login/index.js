@@ -41,7 +41,7 @@ const Signin = () => {
           </Col>
         </Row>
         <Row className="d-flex justify-content-center">
-          <Col className="col col-md-4">
+          <Col className="col col-md-5">
             <Card className={styles.card}>
               <Card.Body>
                 <Row className="mb-5 mt-4">
