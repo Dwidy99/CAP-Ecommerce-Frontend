@@ -8,6 +8,7 @@ import {
   Button,
   Form,
   FloatingLabel,
+  InputGroup,
 } from "react-bootstrap";
 
 const ProductDetail = () => {
@@ -20,11 +21,20 @@ const ProductDetail = () => {
               <img src={Product1} width="400" height="250" alt="" />
               <h3>Add to Action :</h3>
             </Row>
-            <Row className="my-1">
-              <Col className="d-grid gap-2">
-                <Button variant="success" size="lg">
+            <Row>
+              <Col className="col col-md-3">
+                <InputGroup>
+                  <Form.Control type="number" min="0" defaultValue={0} />
+                </InputGroup>
+              </Col>
+              <Col className="col col-md-9 d-grid">
+                <Button variant="success" size="md">
                   Add to Cart
                 </Button>
+              </Col>
+            </Row>
+            <Row className="my-1">
+              <Col className="d-grid gap-2">
                 <Button variant="info" size="lg">
                   Add to Wishlist
                 </Button>
