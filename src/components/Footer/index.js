@@ -54,7 +54,7 @@ const Footer = () => {
             </Col>
             <Col>
               <p className={styles.top}>
-                <a href="/#">Top</a>
+                <a href="#">Top</a>
               </p>
             </Col>
           </Row>

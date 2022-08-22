@@ -1,7 +1,7 @@
 /* HERO */
 .hero {
   min-height: 75vh;
-  background-color: #eaeaea;
+  background-color: #e4e7ed;
   background-image: url("../../assets/images/hotdeal.png");
   background-attachment: fixed;
   background-position: center;

@@ -1,72 +1,16 @@
-/* KERANJANG PRODUCT */
-.keranjangProduct {
-  width: 65%;
-  overflow: hidden;
-  margin: 50px auto;
-  display: flex;
-  flex-direction: column;
+.tableTitle {
+  font-family: "Mouse-Memoirs";
+  letter-spacing: 1px;
 }
 
-.keranjangProduct .checkout,
-.keranjangProduct .shopping {
-  float: right;
-  padding: 10px;
-  margin: 5px;
-  color: var(--font-color, #333);
-  border-radius: 5px;
-  text-decoration: none;
+.tbody img {
+  border-radius: 3px;
 }
 
-.keranjangProduct .shopping {
-  background: var(--table-color, #eaeaea);
+button.success {
+  background-color: var(--main-background-color) !important;
 }
 
-.keranjangProduct .checkout {
-  background: var(--thrid-color, #3db757);
-  color: var(--white-color, #fff);
-}
-
-.keranjangProduct table {
-  width: 100%;
-  overflow: hidden;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.keranjangProduct table thead {
-  font-size: 18px;
-  color: var(--font-color, #333);
-}
-
-.keranjangProduct table thead td {
-  height: 50px;
-}
-
-.keranjangProduct table tbody {
-  font-size: 16px;
-  color: var(--font-color, #333);
-}
-
-.keranjangProduct table tbody .action {
-  padding: 10px;
-  background: var(--font-color, #333);
-  color: var(--white-color, #fff);
-  text-decoration: none;
-  transition: all 0.5s;
-}
-
-.keranjangProduct table tbody .action:hover {
-  background: var(--danger-color, #e74c3c);
-}
-
-.keranjangProduct table tbody td {
-  padding: 10px 0 10px 0;
-}
-
-.keranjangProduct table tbody tr:nth-child(odd) {
-  background: var(--table-color, #eaeaea);
-}
-
-.keranjangProduct table tbody img {
-  height: 60px;
+button.success:hover {
+  background-color: var(--secondary-background-color) !important;
 }

@@ -1,148 +1,29 @@
-/* CONTENT PRODUCT */
-.contentRegister {
-  width: 100%;
-  overflow: hidden;
-  padding-bottom: 50px;
-  margin: 75px 0;
+.formRegister {
+  padding: 75px 0;
+  background-color: #f6f9ff;
 }
 
-.contentRegister .container {
-  width: 85%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  box-sizing: border-box;
+.formRegister h3 {
+  font-family: "Mouse-Memoirs";
 }
 
-.contentRegister .container .product {
+.card {
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
-.contentRegister .user {
-  width: 550px;
-  overflow: hidden;
-  margin: auto;
+.card h4,
+.card .textSmall {
+  font-family: "open-sans";
 }
 
-.contentRegister .user .forgot {
-  float: left;
-  padding: 10px;
+.textSmall {
+  font-size: 0.875em;
 }
 
-.contentRegister .user input {
-  width: 500px;
-  height: 40px;
-  border: 1px solid #dadada;
-  border-radius: 3px;
-  margin-bottom: 10px;
-  float: left;
+button.btnSuccess {
+  background-color: var(--secondary-background-color) !important;
 }
 
-.contentRegister .user button {
-  float: left;
-  width: 200px;
-  padding: 10px;
-  background: var(--secondary-color, #333);
-  border-radius: 3px;
-  border: 0;
-  color: var(--white-color, #fff);
-}
-
-.contentRegister .indicator {
-  width: 250px;
-  overflow: hidden;
-  margin: auto;
-  margin-top: 50px;
-}
-
-.contentRegister .indicator ul {
-  margin: 0;
-  padding: 0;
-}
-
-.contentRegister .indicator li {
-  padding: 10px;
-  float: left;
-  display: block;
-  margin-left: 10px;
-  border-radius: 3px;
-  background: var(--main-color, #19005c);
-  transition: all 1s;
-}
-
-.contentRegister .indicator li:hover {
-  background: #202020;
-}
-
-.contentRegister .indicator a {
-  color: var(--white-color, #fff);
-  text-decoration: none;
-}
-
-.contentRegister .product {
-  width: 230px;
-  height: 230px;
-  overflow: hidden;
-  border-radius: 5px;
-  margin: 5px;
-}
-
-.contentRegister .product .text {
-  margin-left: 10px;
-}
-
-.contentRegister .product img {
-  width: 100%;
-  height: 150px;
-  transition: all 1s;
-}
-
-.contentRegister .product .image {
-  overflow: hidden;
-}
-
-.contentRegister .product .image:hover img {
-  transform: scale(2);
-}
-
-.contentRegister .cart {
-  padding: 7px;
-  border-radius: 3px;
-  float: right;
-  color: var(--white-color, #fff) !important;
-  margin: -12px 0 0 10px;
-  transition: all 1s;
-}
-
-.contentRegister .cart img {
-  width: 25px;
-  height: 25px;
-}
-
-.contentRegister .product .text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.contentRegister .product .text a {
-  text-decoration: none;
-}
-
-.contentRegister .product .text h3 {
-  color: var(--main-color);
-}
-
-.contentRegister .product .text p {
-  position: relative;
-  margin-top: -20px;
-}
-
-.contentRegister .product .text a.cart img {
-  float: right;
-  position: relative;
-  margin-top: -35px;
-  margin-right: 5px;
+button.btnSuccess:hover {
+  background-color: var(--main-background-color) !important;
 }

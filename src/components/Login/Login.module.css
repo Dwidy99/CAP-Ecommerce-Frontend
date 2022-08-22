@@ -1,87 +1,29 @@
-/* CONTENT PRODUCT */
-.contentLogin {
-  width: 100%;
-  overflow: hidden;
-  padding-bottom: 50px;
-  margin: 75px 0;
+.formLogin {
+  padding: 75px 0;
+  background-color: #f6f9ff;
 }
 
-.contentLogin .container {
-  width: 85%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-.contentLogin .container .product {
-  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
-}
-
-.contentLogin .user {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 550px;
-}
-
-.contentLogin .user input {
-  width: 300px;
-  height: 40px;
-  border: 1px solid #dadada;
-  border-radius: 3px;
-  margin-bottom: 10px;
-  float: left;
-}
-
-.contentLogin .user button,
-.register {
-  width: 300px;
-  padding: 10px;
-  background: var(--secondary-color, #333);
-  border-radius: 3px;
-  border: 0;
-  color: var(--white-color, #fff);
-  margin-bottom: 10px;
-}
-
-.register {
-  width: 280px;
-  padding: 10px;
-  background: var(--secondary-color, #333);
-  border-radius: 3px;
-  border: 0;
-  color: var(--white-color, #fff);
-  margin-bottom: 10px;
-  text-align: center;
-  text-decoration: none;
-
+.formLogin h3 {
   font-family: "Mouse-Memoirs";
 }
 
-@media screen and (max-width: 600px) {
-  .contentLogin .user input {
-    width: 305px;
-  }
+.card {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
 
-  .contentLogin .user button,
-  .register {
-    float: left;
-    width: 200px;
-    padding: 10px;
-    background: var(--secondary-color, #333);
-    border-radius: 3px;
-    border: 0;
-    color: var(--white-color, #fff);
-  }
+.card h4,
+.card .textSmall {
+  font-family: "open-sans";
+}
 
-  .register {
-    width: 150px;
-    margin-left: 135px;
-    text-align: center;
-    text-decoration: none;
-  }
+.textSmall {
+  font-size: 0.875em;
+}
+
+button.btnSuccess {
+  background-color: var(--secondary-background-color) !important;
+}
+
+button.btnSuccess:hover {
+  background-color: var(--main-background-color) !important;
 }

@@ -1,3 +1,5 @@
+import { Card, Form, Button, Container, Row, Col } from "react-bootstrap";
+
 import React, { useEffect, useState } from "react";
 import { auth, logInWithEmailAndPassword } from "../../config/firebase";
 import { Link, useNavigate } from "react-router-dom";
@@ -31,41 +33,81 @@ const Signin = () => {
   }, [loading, user, error, navigate]);
 
   return (
-    <React.Fragment>
-      <h2 className="header-title">FORM LOGIN</h2>
-
-      <div className={styles.contentLogin}>
-        <div className={styles.container}>
-          <form className={styles.user} action="" method="">
-            <input
-              type="text"
-              name="username"
-              required
-              value={login.email}
-              onChange={(e) => setLogin({ ...login, email: e.target.value })}
-              placeholder="Username.."
-            />
-            <input
-              type="password"
-              name="password"
-              required
-              value={login.password}
-              onChange={(e) => setLogin({ ...login, password: e.target.value })}
-              placeholder="Password.."
-            />
-            <button type="submit" onClick={(e) => handleLogin(e, "login")}>
-              Login
-            </button>
-            <Link to="/register" className={styles.register}>
-              Register
-            </Link>
-            {/* <a href="#" className={styles.forgot}>
+    <section className={styles.formLogin}>
+      <Container>
+        <Row>
+          <Col>
+            <h3 className="text-center">D Store</h3>
+          </Col>
+        </Row>
+        <Row className="d-flex justify-content-center">
+          <Col className="col col-md-4">
+            <Card className={styles.card}>
+              <Card.Body>
+                <Row className="mb-5 mt-4">
+                  <Col className="text-center">
+                    <h4>Login to Your Account</h4>
+                    <span className={styles.textSmall}>
+                      Enter your username & password to login
+                    </span>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
+                    <Form action="" method="">
+                      <Form.Group>
+                        <Form.Label>Email</Form.Label>
+                        <Form.Control
+                          type="text"
+                          name="email"
+                          required
+                          value={login.email}
+                          onChange={(e) =>
+                            setLogin({ ...login, email: e.target.value })
+                          }
+                          placeholder="Email.."
+                        />
+                      </Form.Group>
+                      <Form.Group className="my-3">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control
+                          type="password"
+                          name="password"
+                          required
+                          value={login.password}
+                          onChange={(e) =>
+                            setLogin({ ...login, password: e.target.value })
+                          }
+                          placeholder="Password.."
+                        />
+                      </Form.Group>
+                      <div className="d-grid gap-2">
+                        <Button
+                          className={styles.btnSuccess}
+                          type="submit"
+                          onClick={(e) => handleLogin(e, "login")}
+                        >
+                          Login
+                        </Button>
+                        <span className="mb-5">
+                          Don't have account?{" "}
+                          <Link to="/register" className={styles.register}>
+                            Create an Account
+                          </Link>
+                        </span>
+                      </div>
+                      {/* <a href="#" className={styles.forgot}>
               Forgot Password
             </a> */}
-          </form>
-        </div>
-      </div>
-    </React.Fragment>
+                    </Form>
+                  </Col>
+                </Row>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+    </section>
   );
 };
 

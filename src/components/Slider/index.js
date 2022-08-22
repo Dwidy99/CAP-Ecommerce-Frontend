@@ -1,33 +1,30 @@
-import styles from "./Slider.module.css";
-
 import Slide1 from "../../assets/images/banner2.jpg";
 import Slide2 from "../../assets/images/banner1.jpg";
 import Slide3 from "../../assets/images/banner3.jpg";
+import React, { useState } from "react";
+import { Carousel, Container } from "react-bootstrap";
 
 const Slider = () => {
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
+
   return (
-    <div className={styles.slider}>
-      <div className={styles.slides}>
-        <input type="radio" className={styles.radioBtn} id="radio1" />
-        <input type="radio" className={styles.radioBtn} id="radio2" />
-        <input type="radio" className={styles.radioBtn} id="radio3" />
-        <input type="radio" className={styles.radioBtn} id="radio4" />
-        <div className={(styles.slide, styles.first)}>
-          <img src={Slide1} alt="" />
-        </div>
-        <div className={styles.slide}>
-          <img src={Slide2} alt="" />
-        </div>
-        <div className={styles.slide}>
-          <img src={Slide3} alt="" />
-        </div>
-      </div>
-      <div className={styles.navigationManual}>
-        <label htmlFor="radio1" className={styles.manualBtn}></label>
-        <label htmlFor="radio2" className={styles.manualBtn}></label>
-        <label htmlFor="radio3" className={styles.manualBtn}></label>
-      </div>
-    </div>
+    <Container className="d-flex justify-content-center">
+      <Carousel activeIndex={index} onSelect={handleSelect} variant="dark">
+        <Carousel.Item>
+          <img className="d-block w-85" src={Slide1} alt="First slide" />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img className="d-block w-85" src={Slide3} alt="Second slide" />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img className="d-block w-85" src={Slide2} alt="Third slide" />
+        </Carousel.Item>
+      </Carousel>
+    </Container>
   );
 };
 

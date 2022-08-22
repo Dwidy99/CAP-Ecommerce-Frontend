@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { auth, registerWithEmailAndPassword } from "../../config/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
+import { Form, Container, Row, Col, Card, Button } from "react-bootstrap";
 
 const Register = () => {
   const [user, loading, error] = useAuthState(auth);
@@ -41,52 +42,97 @@ const Register = () => {
   }, [loading, user, error, navigate]);
 
   return (
-    <React.Fragment>
-      <h2 className="header-title">REGISTER</h2>
-
-      <div className={styles.contentRegister}>
-        <div className={styles.container}>
-          <form className={styles.user} action="" method="">
-            <input
-              type="text"
-              name="username"
-              onChange={(e) =>
-                setDataRegister({ ...dataRegister, name: e.target.value })
-              }
-              required
-              placeholder="Username.."
-            />
-            <input
-              type="email"
-              name="email"
-              onChange={(e) =>
-                setDataRegister({ ...dataRegister, email: e.target.value })
-              }
-              required
-              placeholder="Email.."
-            />
-            <input
-              type="password"
-              name="password"
-              onChange={(e) =>
-                setDataRegister({
-                  ...dataRegister,
-                  password: e.target.value,
-                })
-              }
-              required
-              placeholder="Password.."
-            />
-            <button type="submit" onClick={(e) => handleSubmit(e, "register")}>
-              Submit
-            </button>
-            <Link to="/login" className={styles.forgot}>
-              Already have an account ?
-            </Link>
-          </form>
-        </div>
-      </div>
-    </React.Fragment>
+    <section className={styles.formRegister}>
+      <Container>
+        <Row>
+          <Col>
+            <h3 className="text-center">D Store</h3>
+          </Col>
+        </Row>
+        <Row className="d-flex justify-content-center">
+          <Col className="col col-md-4">
+            <Card className={styles.card}>
+              <Card.Body>
+                <Row className="mb-5 mt-4">
+                  <Col className="text-center">
+                    <h4>Create an Account</h4>
+                    <span className={styles.textSmall}>
+                      Enter your username & password to login
+                    </span>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
+                    <Form action="" method="">
+                      <Form.Group>
+                        <Form.Label>Username</Form.Label>
+                        <Form.Control
+                          type="text"
+                          name="username"
+                          onChange={(e) =>
+                            setDataRegister({
+                              ...dataRegister,
+                              name: e.target.value,
+                            })
+                          }
+                          required
+                          placeholder="Username.."
+                        />
+                      </Form.Group>
+                      <Form.Group>
+                        <Form.Label>Email</Form.Label>
+                        <Form.Control
+                          type="email"
+                          name="email"
+                          onChange={(e) =>
+                            setDataRegister({
+                              ...dataRegister,
+                              email: e.target.value,
+                            })
+                          }
+                          required
+                          placeholder="Email.."
+                        />
+                      </Form.Group>
+                      <Form.Group className="my-3">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control
+                          type="password"
+                          name="password"
+                          onChange={(e) =>
+                            setDataRegister({
+                              ...dataRegister,
+                              password: e.target.value,
+                            })
+                          }
+                          required
+                          placeholder="Password.."
+                        />
+                      </Form.Group>
+                      <div className="d-grid gap-2">
+                        <Button
+                          className={styles.btnSuccess}
+                          type="submit"
+                          onClick={(e) => handleSubmit(e, "register")}
+                        >
+                          Create Account
+                        </Button>
+                        <span className="mb-5">
+                          Already have an account?{" "}
+                          <Link to="/login" className={styles.register}>
+                            Log in
+                          </Link>
+                        </span>
+                      </div>
+                    </Form>
+                  </Col>
+                </Row>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+    </section>
   );
 };
 
