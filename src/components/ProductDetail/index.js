@@ -1,5 +1,7 @@
 import styles from "./ProductDetail.module.css";
-import Product1 from "../../assets/images/produk1.jpg";
+
+import { useFetchProducts } from "../../hooks/useFetchProducts";
+import { useParams } from "react-router-dom";
 
 import {
   Container,
@@ -12,13 +14,20 @@ import {
 } from "react-bootstrap";
 
 const ProductDetail = () => {
+  const { id } = useParams();
+  const productId = useFetchProducts(id);
   return (
     <section className="my-5">
       <Container>
         <Row>
           <Col className="col col-md-5 col-sm-12 flex-column">
             <Row>
-              <img src={Product1} width="400" height="250" alt="" />
+              <img
+                src={productId.products.image}
+                width="400"
+                height="250"
+                alt=""
+              />
               <h3>Add to Action :</h3>
             </Row>
             <Row>
@@ -49,25 +58,10 @@ const ProductDetail = () => {
           </Col>
 
           <Col className="col col-md-5 col-sm-12 desc">
-            <h2>Package Mackbook Pro Air 4K</h2>
-            <h3 className="mb-5">Rp. 28.000.000,-</h3>
+            <h2>{productId.products.name}</h2>
+            <h3 className="mb-5">$ {productId.products.price}</h3>
             <h3>Deskripsi Product :</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-              nemo, perspiciatis sit, repudiandae dolor minima vero similique a
-              nostrum eius sapiente. Sapiente beatae accusantium dolorum
-              voluptate? Veniam consectetur sit exercitationem?
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-              praesentium ea. Facere, iusto ullam nisi repellendus laudantium
-              corporis libero, ducimus minus exercitationem ex, at amet
-              perferendis necessitatibus distinctio officiis molestias? Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-              praesentium ea. Facere, iusto ullam nisi repellendus laudantium
-              corporis libero, ducimus minus exercitationem ex, at amet
-              perferendis necessitatibus distinctio officiis molestias?
-            </p>
+            <p>{productId.products.desc}</p>
             <h3>Review</h3>
             <div className={styles.contentReview}>
               <h4 className={styles.buyer}>
