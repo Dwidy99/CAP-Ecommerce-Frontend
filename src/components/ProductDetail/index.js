@@ -1,8 +1,5 @@
 import styles from "./ProductDetail.module.css";
 
-import { useFetchProducts } from "../../hooks/useFetchProducts";
-import { useParams } from "react-router-dom";
-
 import {
   Container,
   Col,
@@ -12,10 +9,12 @@ import {
   FloatingLabel,
   InputGroup,
 } from "react-bootstrap";
+import { useEffect } from "react";
 
-const ProductDetail = () => {
-  const { id } = useParams();
-  const productId = useFetchProducts(id);
+const ProductDetail = ({ productId }) => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
   return (
     <section className="my-5">
       <Container>
@@ -63,17 +62,6 @@ const ProductDetail = () => {
             <h3>Deskripsi Product :</h3>
             <p>{productId.products.desc}</p>
             <h3>Review</h3>
-            <div className={styles.contentReview}>
-              <h4 className={styles.buyer}>
-                Dwi Yulianto, CEO GadangLearn.com
-              </h4>
-              <p className={styles.comment}>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam,
-                mollitia? Expedita ipsa iste eveniet illo. Nisi dicta ipsa
-                dolore incidunt a repellendus voluptatibus, sit ipsam voluptates
-                vitae in possimus aperiam.
-              </p>
-            </div>
             <div className={styles.contentReview}>
               <h4 className={styles.buyer}>Dwi, CEO Learn.com</h4>
               <p className={styles.comment}>
