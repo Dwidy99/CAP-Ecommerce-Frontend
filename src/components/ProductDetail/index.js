@@ -20,7 +20,7 @@ const ProductDetail = () => {
     <section className="my-5">
       <Container>
         <Row>
-          <Col className="col col-md-5 col-sm-12 flex-column">
+          <Col className="col col-md-5 col-12 flex-column">
             <Row>
               <img
                 src={productId.products.image}
@@ -57,7 +57,7 @@ const ProductDetail = () => {
             </Row>
           </Col>
 
-          <Col className="col col-md-5 col-sm-12 desc">
+          <Col className="col col-md-5 col-12 desc">
             <h2>{productId.products.name}</h2>
             <h3 className="mb-5">$ {productId.products.price}</h3>
             <h3>Deskripsi Product :</h3>

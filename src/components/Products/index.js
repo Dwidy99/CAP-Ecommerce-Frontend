@@ -5,6 +5,7 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const ContentProduct = ({ productsData }) => {
+  console.log(productsData);
   return (
     <section className={styles.products}>
       <Container>

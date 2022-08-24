@@ -3,6 +3,8 @@ import Slider from "../components/Slider";
 import Products from "../components/Products";
 import Testimonial from "../components/Testimonial";
 import Footer from "../components/Footer";
+import Loading from "../components/Loading";
+import Error from "../components/Error";
 
 import { useFetchProducts } from "../hooks/useFetchProducts";
 
@@ -15,8 +17,8 @@ const HomePage = () => {
     <>
       <Hero />
       <Slider />
-      {loading && <h1 className="text-center">Loading...</h1>}
-      {error && <h1 className="text-center">Error!</h1>}
+      {loading && <Loading />}
+      {error && <Error />}
       {products.length > 0 && <Products productsData={products} />}
       <Testimonial />
       <Footer />

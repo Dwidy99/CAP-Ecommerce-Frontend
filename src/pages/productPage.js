@@ -1,6 +1,8 @@
 import Slider from "../components/Slider";
 import Products from "../components/Products";
 import Footer from "../components/Footer";
+import Loading from "../components/Loading";
+import Error from "../components/Error";
 import React from "react";
 
 import { useFetchProducts } from "../hooks/useFetchProducts";
@@ -13,8 +15,8 @@ const ProductPage = () => {
   return (
     <React.Fragment>
       <Slider />
-      {loading && <h1 className="text-center">Loading...</h1>}
-      {error && <h1 className="text-center">Error!</h1>}
+      {loading && <Loading />}
+      {error && <Error />}
       {products.length > 0 && <Products productsData={products} />}
       <Footer />
     </React.Fragment>

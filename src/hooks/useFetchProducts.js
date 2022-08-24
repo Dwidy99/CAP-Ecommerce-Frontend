@@ -34,7 +34,7 @@ export const useFetchProducts = (productId) => {
     };
 
     fetchAPI();
-  }, []);
+  }, [productId]);
 
   return { products, loading, error };
 };
