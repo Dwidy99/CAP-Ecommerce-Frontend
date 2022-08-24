@@ -1,4 +1,7 @@
 import styles from "./ProductDetail.module.css";
+import { image } from "../../image";
+
+import { numberFormat } from "../../utils/idr";
 
 import {
   Container,
@@ -12,6 +15,7 @@ import {
 import { useEffect } from "react";
 
 const ProductDetail = ({ productId }) => {
+  const price = numberFormat(productId.products.price);
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
@@ -22,9 +26,8 @@ const ProductDetail = ({ productId }) => {
           <Col className="col col-md-5 col-12 flex-column">
             <Row>
               <img
-                src={productId.products.image}
-                width="400"
-                height="250"
+                src={image[productId.products.image]}
+                className={styles.imgProduct}
                 alt=""
               />
               <h3>Add to Action :</h3>
@@ -58,10 +61,11 @@ const ProductDetail = ({ productId }) => {
 
           <Col className="col col-md-5 col-12 desc">
             <h2>{productId.products.name}</h2>
-            <h3 className="mb-5">$ {productId.products.price}</h3>
-            <h3>Deskripsi Product :</h3>
+            <h3 className="mb-5">{price}</h3>
+            <h3>Product Description :</h3>
             <p>{productId.products.desc}</p>
-            <h3>Review</h3>
+            <hr />
+            <h3>Review:</h3>
             <div className={styles.contentReview}>
               <h4 className={styles.buyer}>Dwi, CEO Learn.com</h4>
               <p className={styles.comment}>

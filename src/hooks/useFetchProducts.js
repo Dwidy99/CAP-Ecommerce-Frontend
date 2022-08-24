@@ -15,11 +15,11 @@ export const useFetchProducts = (productId) => {
 
         if (productId) {
           res = await axios.get(
-            `https://63044b8f761a3bce77e56ce0.mockapi.io/api/v1/electro/${productId}`
+            `https://63044b8f761a3bce77e56ce0.mockapi.io/api/v1/electric/${productId}`
           );
         } else {
           res = await axios.get(
-            "https://63044b8f761a3bce77e56ce0.mockapi.io/api/v1/electro"
+            "https://63044b8f761a3bce77e56ce0.mockapi.io/api/v1/electric"
           );
         }
 

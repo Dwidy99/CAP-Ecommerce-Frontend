@@ -12,8 +12,8 @@ footer {
   letter-spacing: 1px;
 }
 
-.top a {
-  text-decoration: none;
+.top button {
+  border: none;
 }
 /* MEGA FOOTER */
 .megaFooter {
