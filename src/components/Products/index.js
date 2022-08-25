@@ -5,6 +5,7 @@ import { image } from "../../image";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { numberFormat } from "../../utils/idr";
+import PropTypes from "prop-types";
 
 const ContentProduct = ({ productsData }) => {
   return (
@@ -56,6 +57,10 @@ const ContentProduct = ({ productsData }) => {
       </Container>
     </section>
   );
+};
+
+ContentProduct.protoType = {
+  productsData: PropTypes.array,
 };
 
 export default ContentProduct;

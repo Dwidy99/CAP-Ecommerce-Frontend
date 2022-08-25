@@ -1,5 +1,6 @@
 import styles from "./ProductDetail.module.css";
 import { image } from "../../image";
+import PropTypes from "prop-types";
 
 import { numberFormat } from "../../utils/idr";
 
@@ -76,7 +77,7 @@ const ProductDetail = ({ productId }) => {
               </p>
             </div>
             <div className={styles.contentReview}>
-              <h4 className={styles.buyer}>Yulianto, CEO Gadang.com</h4>
+              <h4 className={styles.buyer}>Yulianto, CEO Study.com</h4>
               <p className={styles.comment}>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam,
                 mollitia? Expedita ipsa iste eveniet illo. Nisi dicta ipsa
@@ -128,6 +129,10 @@ const ProductDetail = ({ productId }) => {
       </Container>
     </section>
   );
+};
+
+ProductDetail.protoType = {
+  productId: PropTypes.number,
 };
 
 export default ProductDetail;

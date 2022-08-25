@@ -1,7 +1,7 @@
 import CartLink from "../../assets/images/icons/buying.png";
 import styles from "./Navbar.module.css";
 
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, logout } from "../../config/firebase";
 import { Navbar, Container, Nav } from "react-bootstrap";
@@ -17,14 +17,14 @@ const Navigation = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="justify-content-end flex-grow-1 pe-3">
-            <Nav.Link as={Link} to="/" active>
+            <Nav.Link as={NavLink} to="/">
               Home
             </Nav.Link>
-            <Nav.Link as={Link} to="/product" active>
+            <Nav.Link as={NavLink} to="/product">
               Our Produts
             </Nav.Link>
             {user && (
-              <Nav.Link as={Link} to="/cart" active>
+              <Nav.Link as={NavLink} to="/cart">
                 <img
                   src={CartLink}
                   alt="cart"
@@ -35,11 +35,11 @@ const Navigation = () => {
               </Nav.Link>
             )}
             {user ? (
-              <Nav.Link as={Link} to="/#" onClick={logout} active>
+              <Nav.Link as={NavLink} to="/#" onClick={logout}>
                 Logout
               </Nav.Link>
             ) : (
-              <Nav.Link as={Link} to="/login" active>
+              <Nav.Link as={NavLink} to="/login">
                 Login
               </Nav.Link>
             )}
