@@ -1,4 +1,5 @@
 // Import the functions you need from the SDKs you need
+import swal from "sweetalert";
 import { initializeApp } from "firebase/app";
 
 import {
@@ -52,6 +53,7 @@ const registerWithEmailAndPassword = async (name, email, password) => {
 
 const logout = () => {
   signOut(auth);
+  swal("Success!", "You are logged out!", "success");
 };
 
 export {

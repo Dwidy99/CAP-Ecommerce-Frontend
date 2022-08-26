@@ -2,6 +2,8 @@ import styles from "./ProductDetail.module.css";
 import { image } from "../../image";
 import PropTypes from "prop-types";
 
+import swal from "sweetalert";
+
 import { numberFormat } from "../../utils/idr";
 
 import {
@@ -13,7 +15,7 @@ import {
   FloatingLabel,
   InputGroup,
 } from "react-bootstrap";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -31,14 +33,14 @@ const ProductDetail = ({ productId }) => {
 
   const handleAddToCart = () => {
     if (!user) {
-      alert("Please login to add to cart");
-      navigate("/signin");
+      swal("Warning!", "Please login to add cart!", "warning");
+      navigate("/login");
     } else {
       const { id, name, price, image } = productId.products;
       const { quantity } = detailOrder;
       const data = { id, name, price, image, quantity };
       if (quantity === 0) {
-        alert("Please fill all field");
+        swal("Warning!", "Please fill all field!", "error");
       } else {
         dispatch({
           type: "ADD_TO_CART",
@@ -50,7 +52,10 @@ const ProductDetail = ({ productId }) => {
   };
 
   const price = numberFormat(productId.products.price);
-  console.log(productId);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  });
 
   return (
     <section className="my-5">
@@ -71,7 +76,7 @@ const ProductDetail = ({ productId }) => {
                   <Form.Control
                     type="number"
                     min="0"
-                    defaultValue={1}
+                    defaultValue={0}
                     onChange={(e) =>
                       setDetailOrder({
                         ...detailOrder,

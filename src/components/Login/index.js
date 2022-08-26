@@ -5,6 +5,8 @@ import { auth, logInWithEmailAndPassword } from "../../config/firebase";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 
+import swal from "sweetalert";
+
 import styles from "./Login.module.css";
 
 const Signin = () => {
@@ -20,7 +22,7 @@ const Signin = () => {
     e.preventDefault();
     if (param === "login") {
       await logInWithEmailAndPassword(login.email, login.password);
-      alert("Login Successful");
+      swal("Succeess!", "Login Success", "success");
     }
   };
 

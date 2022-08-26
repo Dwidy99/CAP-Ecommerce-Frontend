@@ -1,9 +1,15 @@
 import styles from "./Register.module.css";
 import React, { useEffect, useState } from "react";
-import { auth, registerWithEmailAndPassword } from "../../config/firebase";
+import {
+  auth,
+  logout,
+  registerWithEmailAndPassword,
+} from "../../config/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
 import { Form, Container, Row, Col, Card, Button } from "react-bootstrap";
+
+import swal from "sweetalert";
 
 const Register = () => {
   const [user, loading, error] = useAuthState(auth);
@@ -26,7 +32,7 @@ const Register = () => {
         dataRegister.password
       );
       if (isRegistered) {
-        alert("User created successfully");
+        swal("Good job!", "User created successfully!", "success");
       }
       console.log(isRegistered);
       return;
@@ -37,7 +43,11 @@ const Register = () => {
     if (loading) {
       return;
     }
-    if (user) navigate("/");
+    if (user) {
+      navigate("/login");
+      logout();
+      swal("Good job!", "User created successfully!. please login", "success");
+    }
     if (error) alert("Error");
   }, [loading, user, error, navigate]);
 

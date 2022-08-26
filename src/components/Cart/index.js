@@ -3,12 +3,20 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { image } from "../../image";
 
-import { Container, Row, Col, Table, Button } from "react-bootstrap";
+import { Container, Row, Col, Table, Button, Form } from "react-bootstrap";
 import { removeProductToCart } from "../../config/redux/cart-product/action";
+import { numberFormat } from "../../utils/idr";
 
 const Cart = () => {
   const dispatch = useDispatch();
   const { data } = useSelector((state) => state.productOrder);
+
+  const subTotalPrice = data.reduce(
+    (acc, curr) => acc + curr.price * curr.quantity,
+    0
+  );
+  const tax = ((15 / 100) * subTotalPrice).toFixed(2);
+  const totalPrice = (subTotalPrice + parseFloat(tax)).toFixed(2);
   return (
     <section className="my-5">
       <Container>
@@ -45,8 +53,21 @@ const Cart = () => {
                           />
                         </td>
                         <td>{item.name}</td>
-                        <td>Rp. {item.price}</td>
-                        <td>{item.quantity}</td>
+                        <td>{numberFormat(item.price * item.quantity)}</td>
+                        <td className="col col-md-2">
+                          <Form.Control
+                            type="number"
+                            min={1}
+                            defaultValue={item.quantity}
+                            onChange={(e) =>
+                              dispatch({
+                                type: "CHANGE_QUANTITY_ITEM",
+                                value: e.target.value,
+                                id: item.id,
+                              })
+                            }
+                          />
+                        </td>
                         <td>
                           <Button
                             variant="dark"
@@ -63,10 +84,22 @@ const Cart = () => {
               </Col>
             </Row>
 
-            <Row>
-              <Col className="d-flex justify-content-end my-4">
-                <Button variant="secondary">Belanja lagi</Button>
-                <Button className={styles.success}>Checkout</Button>
+            <Row className="d-flex justify-content-end">
+              <Col className="col col-md-6 text-end my-4">
+                <Table striped bordered hover>
+                  <tr>
+                    <td>SubTotal</td>
+                    <td>{numberFormat(subTotalPrice)}</td>
+                  </tr>
+                  <tr>
+                    <td>Tax</td>
+                    <td>{numberFormat(tax)}</td>
+                  </tr>
+                  <tr>
+                    <td>Total</td>
+                    <td>{numberFormat(totalPrice)}</td>
+                  </tr>
+                </Table>
               </Col>
             </Row>
           </Col>
