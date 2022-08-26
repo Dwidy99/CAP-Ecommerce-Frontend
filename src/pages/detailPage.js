@@ -5,6 +5,7 @@ import Error from "../components/Error";
 import Footer from "../components/Footer";
 import { useFetchProducts } from "../hooks/useFetchProducts";
 import { useParams } from "react-router-dom";
+import TopProduct from "../components/TopProduct";
 
 const LoginPage = () => {
   const { id } = useParams();
@@ -12,11 +13,16 @@ const LoginPage = () => {
   const loading = productId.loading;
   const error = productId.error;
 
+  const data = useFetchProducts();
+  const products = data.products;
+  let topProducts = products.filter((p) => p.top_sale === true);
+
   return (
     <>
       {loading && <Loading />}
       {error && <Error />}
       {productId !== "" && <DetailProduct productId={productId} />}
+      <TopProduct topProducts={topProducts} />
       <Testimonial />
       <Footer />
     </>

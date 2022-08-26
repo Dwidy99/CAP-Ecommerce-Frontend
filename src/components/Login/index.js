@@ -20,7 +20,7 @@ const Signin = () => {
     e.preventDefault();
     if (param === "login") {
       await logInWithEmailAndPassword(login.email, login.password);
-      alert();
+      alert("Login Successful");
     }
   };
 

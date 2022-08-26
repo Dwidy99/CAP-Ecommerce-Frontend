@@ -27,3 +27,7 @@ button.btnSuccess {
 button.btnSuccess:hover {
   background-color: var(--main-background-color) !important;
 }
+
+.register {
+  text-decoration: none;
+}

@@ -37,8 +37,8 @@ const Footer = () => {
             <Col>
               <h2>GET IN TOUCH</h2>
               <p>
-                Jl. Melon kaliurang No. 7. Kab. Tangerang, BANTEN (02151)
-                12345678 cs@dwi'scompany.com
+                Jl. Kenanga Terusan No.35, Cilandak Tim., Kec. Ps. Minggu
+                (02151) 12345678 cs@d'scompany.com
               </p>
             </Col>
           </Row>

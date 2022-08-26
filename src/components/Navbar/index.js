@@ -35,7 +35,7 @@ const Navigation = () => {
               </Nav.Link>
             )}
             {user ? (
-              <Nav.Link as={NavLink} to="/#" onClick={logout}>
+              <Nav.Link as={Link} to="/#" onClick={logout}>
                 Logout
               </Nav.Link>
             ) : (

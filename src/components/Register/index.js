@@ -64,7 +64,7 @@ const Register = () => {
                 <Row>
                   <Col>
                     <Form action="" method="">
-                      <Form.Group>
+                      <Form.Group className="mb-3">
                         <Form.Label>Username</Form.Label>
                         <Form.Control
                           type="text"
@@ -120,7 +120,7 @@ const Register = () => {
                         <span className="mb-5">
                           Already have an account?{" "}
                           <Link to="/login" className={styles.register}>
-                            Log in
+                            Login
                           </Link>
                         </span>
                       </div>

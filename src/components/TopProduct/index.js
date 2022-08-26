@@ -1,4 +1,4 @@
-import styles from "./Products.module.css";
+import styles from "./TopProduct.module.css";
 import star1 from "../../assets/images/icons/star1.png";
 import star2 from "../../assets/images/icons/star2.png";
 import { image } from "../../image";
@@ -8,17 +8,17 @@ import { Link } from "react-router-dom";
 import { numberFormat } from "../../utils/idr";
 import PropTypes from "prop-types";
 
-const ContentProduct = ({ productsData }) => {
+const TopProduct = ({ topProducts }) => {
   return (
     <section className={styles.products}>
       <Container>
         <Row>
           <Col>
-            <h2 className="text-center">PRODUCTS</h2>
+            <h2>TOP PRODUCTS</h2>
           </Col>
         </Row>
         <Row className="d-flex justify-content-center">
-          {productsData.map((data, index) => (
+          {topProducts.map((data, index) => (
             <Col
               key={index}
               className="col col col-lg-3 col-md-4 col-sm-5 col-6 mb-4 mt-4"
@@ -66,8 +66,8 @@ const ContentProduct = ({ productsData }) => {
   );
 };
 
-ContentProduct.protoType = {
+TopProduct.protoType = {
   productsData: PropTypes.array,
 };
 
-export default ContentProduct;
+export default TopProduct;
