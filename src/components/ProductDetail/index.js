@@ -45,6 +45,7 @@ const ProductDetail = ({ productId }) => {
           type: "ADD_TO_CART",
           value: data,
         });
+        navigate("/cart");
         swal("Success!", "Added to cart!", "success");
       }
     }
@@ -54,7 +55,7 @@ const ProductDetail = ({ productId }) => {
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  });
+  }, []);
 
   return (
     <section className="my-5">
