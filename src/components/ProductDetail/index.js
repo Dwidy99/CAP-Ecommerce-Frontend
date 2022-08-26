@@ -13,13 +13,46 @@ import {
   FloatingLabel,
   InputGroup,
 } from "react-bootstrap";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../../config/firebase/index";
 
 const ProductDetail = ({ productId }) => {
+  console.log("dwi", productId);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const [user] = useAuthState(auth);
+
+  //   const [changeProduct, setChangeProduct] = useState(false);
+  const [detailOrder, setDetailOrder] = useState({
+    quantity: 0,
+  });
+
+  const handleAddToCart = () => {
+    if (!user) {
+      alert("Please login to add to cart");
+      navigate("/signin");
+    } else {
+      const { id, name, price, image } = productId.products;
+      const { quantity } = detailOrder;
+      const data = { id, name, price, image, quantity };
+      if (quantity === 0) {
+        alert("Please fill all field");
+      } else {
+        dispatch({
+          type: "ADD_TO_CART",
+          value: data,
+        });
+        alert("Added to cart");
+      }
+    }
+  };
+
   const price = numberFormat(productId.products.price);
-  useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  }, []);
+  console.log(productId);
+
   return (
     <section className="my-5">
       <Container>
@@ -36,11 +69,21 @@ const ProductDetail = ({ productId }) => {
             <Row>
               <Col className="col col-md-3">
                 <InputGroup>
-                  <Form.Control type="number" min="0" defaultValue={0} />
+                  <Form.Control
+                    type="number"
+                    min="0"
+                    defaultValue={1}
+                    onChange={(e) =>
+                      setDetailOrder({
+                        ...detailOrder,
+                        quantity: e.target.value,
+                      })
+                    }
+                  />
                 </InputGroup>
               </Col>
               <Col className="col col-md-9 d-grid">
-                <Button variant="success" size="md">
+                <Button onClick={handleAddToCart} variant="success" size="md">
                   Add to Cart
                 </Button>
               </Col>

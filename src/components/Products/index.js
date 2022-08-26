@@ -9,6 +9,7 @@ import { numberFormat } from "../../utils/idr";
 import PropTypes from "prop-types";
 
 const ContentProduct = ({ productsData }) => {
+  console.log("ProductData", productsData);
   return (
     <section className={styles.products}>
       <Container>

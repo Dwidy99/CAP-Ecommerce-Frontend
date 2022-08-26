@@ -12,6 +12,7 @@ const ProductPage = () => {
   const products = data.products;
   const loading = data.loading;
   const error = data.error;
+  console.log("products", products);
 
   return (
     <React.Fragment>

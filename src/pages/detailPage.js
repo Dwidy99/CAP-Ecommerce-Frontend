@@ -7,13 +7,16 @@ import { useFetchProducts } from "../hooks/useFetchProducts";
 import { useParams } from "react-router-dom";
 import TopProduct from "../components/TopProduct";
 
-const LoginPage = () => {
+const DetailPage = () => {
   const { id } = useParams();
+  console.log("ID", id);
   const productId = useFetchProducts(id);
+  console.log("Dwi2", productId);
   const loading = productId.loading;
   const error = productId.error;
 
   const data = useFetchProducts();
+  console.log("data4444", data);
   const products = data.products;
   let topProducts = products.filter((p) => p.top_sale === true);
 
@@ -29,4 +32,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default DetailPage;
