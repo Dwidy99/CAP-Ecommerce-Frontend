@@ -9,14 +9,11 @@ import TopProduct from "../components/TopProduct";
 
 const DetailPage = () => {
   const { id } = useParams();
-  console.log("ID", id);
   const productId = useFetchProducts(id);
-  console.log("Dwi2", productId);
   const loading = productId.loading;
   const error = productId.error;
 
   const data = useFetchProducts();
-  console.log("data4444", data);
   const products = data.products;
   let topProducts = products.filter((p) => p.top_sale === true);
 

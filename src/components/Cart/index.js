@@ -1,16 +1,14 @@
 import styles from "./Cart.module.css";
-import Img1 from "../../assets/images/product/Cannon-EOS7D.jpg";
-import Img2 from "../../assets/images/product/Go-Pro-Hero9-Black.jpg";
-import Img3 from "../../assets/images/product/LUMIX-GH5.jpg";
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { image } from "../../image";
 
 import { Container, Row, Col, Table, Button } from "react-bootstrap";
+import { removeProductToCart } from "../../config/redux/cart-product/action";
 
 const Cart = () => {
   const dispatch = useDispatch();
   const { data } = useSelector((state) => state.productOrder);
-  console.log("DATA", data);
   return (
     <section className="my-5">
       <Container>
@@ -40,7 +38,7 @@ const Cart = () => {
                         <td>{index + 1}</td>
                         <td>
                           <img
-                            src={"./../../assets/images/product/produk9.jpg"}
+                            src={image[item.image]}
                             width="75"
                             height="55"
                             alt={item.name}
@@ -50,7 +48,11 @@ const Cart = () => {
                         <td>Rp. {item.price}</td>
                         <td>{item.quantity}</td>
                         <td>
-                          <Button variant="dark" size="sm">
+                          <Button
+                            variant="dark"
+                            size="sm"
+                            onClick={() => dispatch(removeProductToCart(item))}
+                          >
                             Delete
                           </Button>
                         </td>
@@ -62,7 +64,7 @@ const Cart = () => {
             </Row>
 
             <Row>
-              <Col className="d-flex justify-content-end my-4 d-grid gap-2">
+              <Col className="d-flex justify-content-end my-4">
                 <Button variant="secondary">Belanja lagi</Button>
                 <Button className={styles.success}>Checkout</Button>
               </Col>

@@ -13,7 +13,7 @@ import {
   FloatingLabel,
   InputGroup,
 } from "react-bootstrap";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -25,7 +25,6 @@ const ProductDetail = ({ productId }) => {
   const navigate = useNavigate();
   const [user] = useAuthState(auth);
 
-  //   const [changeProduct, setChangeProduct] = useState(false);
   const [detailOrder, setDetailOrder] = useState({
     quantity: 0,
   });
