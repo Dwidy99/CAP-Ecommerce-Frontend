@@ -22,7 +22,6 @@ const Signin = () => {
     e.preventDefault();
     if (param === "login") {
       await logInWithEmailAndPassword(login.email, login.password);
-      swal("Succeess!", "Login Success", "success");
     }
   };
 
@@ -30,8 +29,14 @@ const Signin = () => {
     if (loading) {
       return;
     }
-    if (user) navigate("/");
-    if (error) alert(error);
+    if (user) {
+      navigate("/");
+      swal("Succeess!", "Login Success", "success");
+    }
+    if (error) {
+      alert(error);
+      return;
+    }
   }, [loading, user, error, navigate]);
 
   return (
