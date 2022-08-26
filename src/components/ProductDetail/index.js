@@ -22,7 +22,6 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../config/firebase/index";
 
 const ProductDetail = ({ productId }) => {
-  console.log("dwi", productId);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [user] = useAuthState(auth);
@@ -46,7 +45,7 @@ const ProductDetail = ({ productId }) => {
           type: "ADD_TO_CART",
           value: data,
         });
-        alert("Added to cart");
+        swal("Success!", "Added to cart!", "success");
       }
     }
   };
