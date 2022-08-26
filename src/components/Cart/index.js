@@ -87,18 +87,20 @@ const Cart = () => {
             <Row className="d-flex justify-content-end">
               <Col className="col col-md-6 text-end my-4">
                 <Table striped bordered hover>
-                  <tr>
-                    <td>SubTotal</td>
-                    <td>{numberFormat(subTotalPrice)}</td>
-                  </tr>
-                  <tr>
-                    <td>Tax</td>
-                    <td>{numberFormat(tax)}</td>
-                  </tr>
-                  <tr>
-                    <td>Total</td>
-                    <td>{numberFormat(totalPrice)}</td>
-                  </tr>
+                  <thead>
+                    <tr>
+                      <td>SubTotal</td>
+                      <td>{numberFormat(subTotalPrice)}</td>
+                    </tr>
+                    <tr>
+                      <td>Tax</td>
+                      <td>{numberFormat(tax)}</td>
+                    </tr>
+                    <tr>
+                      <td>Total</td>
+                      <td>{numberFormat(totalPrice)}</td>
+                    </tr>
+                  </thead>
                 </Table>
               </Col>
             </Row>

@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 // import "../assets/images/product/produk9.jpg"
 
 export const useFetchProducts = (productId) => {
-  console.log("r", productId);
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);

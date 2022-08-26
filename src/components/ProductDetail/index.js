@@ -37,10 +37,12 @@ const ProductDetail = ({ productId }) => {
     } else {
       const { id, name, price, image } = productId.products;
       const { quantity } = detailOrder;
+
       const data = { id, name, price, image, quantity };
       if (quantity === 0) {
         swal("Warning!", "Please fill all field!", "error");
       } else {
+        console.log("Quantity", quantity);
         dispatch({
           type: "ADD_TO_CART",
           value: data,
